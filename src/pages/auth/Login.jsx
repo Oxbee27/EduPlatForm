@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/common/Button.jsx";
+import { useAuth } from "../../context/AuthContext.jsx";
 
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
+  const navigate = useNavigate();
+  const { login } = useAuth();
 
   function handleChange(e) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -11,14 +14,16 @@ export default function Login() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // TODO: wire up to real auth API
-    console.log("Login submitted:", form);
+
+    login({ email: form.email });
+
+    setForm({ email: "", password: "" });
+    navigate("/dashboard");
   }
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-slate-50 px-4">
       <div className="w-full max-w-md rounded-xl border border-slate-200 bg-white p-8 shadow-sm">
-        {/* Logo */}
         <Link to="/" className="flex items-center justify-center gap-2">
           <span className="h-8 w-8 rounded-lg bg-indigo-600" />
           <span className="text-lg font-bold text-slate-900">EduPlatform</span>

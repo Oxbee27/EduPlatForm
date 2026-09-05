@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/common/Button.jsx";
+import { useAuth } from "../../context/AuthContext.jsx";
 
 export default function Register() {
   const [form, setForm] = useState({
@@ -10,6 +11,8 @@ export default function Register() {
     confirmPassword: "",
   });
   const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const { register } = useAuth();
 
   function handleChange(e) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -22,8 +25,11 @@ export default function Register() {
       return;
     }
     setError("");
-    // TODO: wire up to real auth API
-    console.log("Register submitted:", form);
+
+    register({ name: form.name, email: form.email });
+
+    setForm({ name: "", email: "", password: "", confirmPassword: "" });
+    navigate("/dashboard");
   }
 
   return (
