@@ -37,8 +37,10 @@ export default function Register() {
       <div className="w-full max-w-md rounded-xl border border-slate-200 bg-white p-8 shadow-sm">
         {/* Logo */}
         <Link to="/" className="flex items-center justify-center gap-2">
-          <span className="h-8 w-8 rounded-lg bg-indigo-600" />
-          <span className="text-lg font-bold text-slate-900">EduPlatform</span>
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 font-display text-sm font-medium text-white">
+            O
+          </span>
+          <span className="font-display text-lg font-medium text-slate-900">Orbis</span>
         </Link>
 
         <h1 className="mt-6 text-center text-2xl font-bold text-slate-900">

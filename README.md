@@ -1,17 +1,28 @@
-# React + Vite
+# Orbis
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An online learning platform — browse courses, enroll, and track progress
+from a student dashboard.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19 + React Router 7
+- Vite 8
+- Tailwind CSS 4
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+pnpm install
+pnpm dev
+```
 
-## Expanding the ESLint configuration
+Build for production with `pnpm build`, preview with `pnpm preview`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# EduPlatForm
+## Project structure
+
+- `src/pages/public` — marketing site (home, courses, pricing, about)
+- `src/pages/auth` — login / register
+- `src/pages/dashboard` — protected student dashboard
+- `src/components` — shared UI (buttons, nav, course cards, hero)
+- `src/context/AuthContext.jsx` — auth state used by `ProtectedRoute`
+- `src/data/courses.js` — course catalog data

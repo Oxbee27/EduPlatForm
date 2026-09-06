@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "../../components/common/Button.jsx";
 import SectionHeading from "../../components/common/SectionHeading.jsx";
 import CourseCard from "../../components/course/CourseCard.jsx";
+import Hero from "../../components/common/Hero.jsx";
 import { courses } from "../../data/courses.js";
 
 export default function Home() {
@@ -10,30 +11,7 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-gradient-to-b from-indigo-50 to-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 text-center">
-          <span className="inline-block rounded-full bg-indigo-100 px-4 py-1 text-sm font-medium text-indigo-700">
-            Over 20,000 students learning today
-          </span>
-          <h1 className="mt-6 text-4xl sm:text-5xl font-bold tracking-tight text-slate-900">
-            Learn new skills.
-            <br className="hidden sm:block" /> Advance your career.
-          </h1>
-          <p className="mt-4 max-w-xl mx-auto text-lg text-slate-600">
-            Expert-led courses in development, design, data science, and
-            marketing — learn at your own pace, from anywhere.
-          </p>
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <Button as={Link} to="/courses" size="lg">
-              Browse Courses
-            </Button>
-            <Button as={Link} to="/register" variant="secondary" size="lg">
-              Get Started Free
-            </Button>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* Stats */}
       <section className="border-y border-slate-100 bg-white">

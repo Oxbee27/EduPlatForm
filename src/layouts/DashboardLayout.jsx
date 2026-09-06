@@ -23,8 +23,10 @@ export default function DashboardLayout() {
       {/* Sidebar */}
       <aside className="hidden md:flex w-64 flex-col border-r border-slate-200 bg-white">
         <Link to="/" className="flex items-center gap-2 px-6 py-5 border-b border-slate-100">
-          <span className="h-8 w-8 rounded-lg bg-indigo-600" />
-          <span className="text-lg font-bold text-slate-900">EduPlatform</span>
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 font-display text-sm font-medium text-white">
+            O
+          </span>
+          <span className="font-display text-lg font-medium text-slate-900">Orbis</span>
         </Link>
 
         <nav className="flex-1 space-y-1 px-4 py-6">
@@ -56,8 +58,10 @@ export default function DashboardLayout() {
         {/* Mobile top bar */}
         <div className="md:hidden flex items-center justify-between border-b border-slate-200 bg-white px-4 py-3">
           <Link to="/" className="flex items-center gap-2">
-            <span className="h-7 w-7 rounded-lg bg-indigo-600" />
-            <span className="font-bold text-slate-900">EduPlatform</span>
+            <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-600 font-display text-xs font-medium text-white">
+              O
+            </span>
+            <span className="font-display font-medium text-slate-900">Orbis</span>
           </Link>
           <Button variant="ghost" size="sm" onClick={logout}>
             Log Out

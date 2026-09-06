@@ -12,7 +12,7 @@ export default function About() {
 
       <div className="mt-10 space-y-6 text-slate-600 leading-relaxed">
         <p>
-          EduPlatform was founded to close the gap between traditional
+          Orbis was founded to close the gap between traditional
           education and the skills people actually need in today's job
           market. We partner with industry experts to build courses that are
           practical, up to date, and genuinely useful.

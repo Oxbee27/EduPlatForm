@@ -26,11 +26,14 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2">
-              <span className="h-8 w-8 rounded-lg bg-indigo-500" />
-              <span className="text-lg font-bold text-white">EduPlatform</span>
+              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500 font-display text-sm font-medium text-white">
+                O
+              </span>
+              <span className="font-display text-lg font-medium text-white">Orbis</span>
             </div>
             <p className="mt-3 text-sm text-slate-400">
-              Learn new skills online with expert-led courses, anytime, anywhere.
+              Courses, mentors, and momentum in one place — learn at your own
+              pace, anytime, anywhere.
             </p>
           </div>
 
@@ -51,7 +54,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 border-t border-slate-800 pt-6 text-center text-sm text-slate-500">
-          © {year} EduPlatform. All rights reserved.
+          © {year} Orbis. All rights reserved.
         </div>
       </div>
     </footer>
