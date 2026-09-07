@@ -15,7 +15,7 @@ const PLANS = [
   },
   {
     name: "Pro",
-    price: "$19/mo",
+    price: "#100000/mo",
     description: "For serious learners who want it all.",
     features: [
       "Access to all courses",
@@ -28,7 +28,7 @@ const PLANS = [
   },
   {
     name: "Team",
-    price: "$49/mo",
+    price: "#1500000/mo",
     description: "For teams and organizations.",
     features: [
       "Everything in Pro",

@@ -31,7 +31,7 @@ export default function CourseCard({ course }) {
 
   return (
     <Link
-      to={`/courses/${id}`}
+      to={`/courses/#{id}`}
       className="group flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-md"
     >
       {/* Thumbnail */}
@@ -75,10 +75,10 @@ export default function CourseCard({ course }) {
 
         {/* Price */}
         <div className="mt-4 flex items-center gap-2">
-          <span className="text-lg font-bold text-slate-900">${price.toFixed(2)}</span>
+          <span className="text-lg font-bold text-slate-900">#{price.toFixed(2)}</span>
           {hasDiscount && (
             <span className="text-sm text-slate-400 line-through">
-              ${originalPrice.toFixed(2)}
+              #{originalPrice.toFixed(2)}
             </span>
           )}
         </div>
